@@ -1,7 +1,7 @@
 #Investment Report
 
 #Take input values from the user 
-amt = float(input("Enter the starting balance: "))
+amt = float(input("Enter the deposit amount: "))
 years = int(input("Enter the number of years: "))
 rate = float(input("Enter the rate in %: "))
 #convert rate to a decimal number
@@ -18,5 +18,5 @@ for years in range(1,years + 1):
     amt = endbalance
     totalInterest+= interest
     
-print("Ending balance: ", "%1.2f" % endbalance)
+print("Total Amount: ", "%1.2f" % endbalance)
 print("Total Interest earned: ", "%0.2f" % totalInterest)
