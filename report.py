@@ -1,7 +1,7 @@
 #Investment Report
 
 #Take input values from the user 
-amt = float(input("Enter the deposit amount: "))
+amt = float(input("Enter the principle amount: "))
 years = int(input("Enter the number of years: "))
 rate = float(input("Enter the rate in %: "))
 #convert rate to a decimal number
@@ -9,7 +9,7 @@ rate/=100
 totalInterest = 0.0
 
 #start the header of the table
-print("%5s%18s%14s%19s" % ("Year", "Starting balance", "Interest", "Ending balance"))
+print("%5s%18s%14s%19s" % ("Year", "Opening balance", "Interest", "Closing balance"))
 
 for years in range(1,years + 1):
     interest = amt*rate
@@ -18,5 +18,5 @@ for years in range(1,years + 1):
     amt = endbalance
     totalInterest+= interest
     
-print("Total Amount: ", "%1.2f" % endbalance)
+print("Maturity Amount: ", "%1.2f" % endbalance)
 print("Total Interest earned: ", "%0.2f" % totalInterest)
